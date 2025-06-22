@@ -1,4 +1,4 @@
-package org.sda.kiss;
+package org.sda.goodpractices;
 
 public class KeepItSimpleStupid {
     // ❌ Bad: Overcomplicated logic to check even numbers
