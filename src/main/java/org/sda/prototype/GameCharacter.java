@@ -18,6 +18,16 @@ public class GameCharacter implements Cloneable {
 
     public GameCharacter clone() {
         return new GameCharacter(this.name, this.level, new ArrayList<>(this.items));
+
+        // shallow:
+        /*
+
+        try {
+            return (GameCharacter) super.clone(); // shallow copy
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+         */
     }
 
     public GameCharacter(String name, int level, List<GameItem> items) {
