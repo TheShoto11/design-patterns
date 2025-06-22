@@ -68,8 +68,5 @@ public class Student implements Cloneable{
         System.out.println("GOING TO UPDATE ADDRESS TO DURRES");
         System.out.println(student);
         System.out.println(st2);
-
-
-
     }
 }
