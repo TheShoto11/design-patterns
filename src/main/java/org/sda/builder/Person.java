@@ -16,7 +16,7 @@ public class Person {
         private String name, surname, email, address;
         private int age;
 
-        public Builder name(String name) {
+        public Builder setName(String name) {
             this.name = name;
             return this;
         }
@@ -37,7 +37,9 @@ public class Person {
         }
 
         public Builder setAge(int age) {
+            if (age > 18){
             this.age = age;
+            }
             return this;
         }
 
@@ -48,7 +50,7 @@ public class Person {
 
     public static void main(String[] args) {
         Person person = new Person.Builder()
-                .name("Gledis")
+                .setName("Gledis")
                 .setSurname("Lami")
                 .setEmail("test@gmail.com")
                 .setAge(22)

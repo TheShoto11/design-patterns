@@ -17,17 +17,16 @@ public class GameCharacter implements Cloneable {
     private List<GameItem> items;
 
     public GameCharacter clone() {
-        return new GameCharacter(this.name, this.level, new ArrayList<>(this.items));
+
+        return new GameCharacter(this.name, this.level, items.stream().map(GameItem::clone).toList());
 
         // shallow:
-        /*
+//        try {
+//            return (GameCharacter) super.clone(); // shallow copy
+//        } catch (CloneNotSupportedException e) {
+//            throw new AssertionError();
+//        }
 
-        try {
-            return (GameCharacter) super.clone(); // shallow copy
-        } catch (CloneNotSupportedException e) {
-            throw new AssertionError();
-        }
-         */
     }
 
     public GameCharacter(String name, int level, List<GameItem> items) {

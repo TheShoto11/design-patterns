@@ -10,7 +10,9 @@ public class MediaAdapter implements MediaPlayer{
 
     @Override
     public void play(String fileName) {
+        System.out.println("Going to call Legacy Player on this path");
         legacyPlayer.playFile(fileName);
+
     }
 
     public static void main(String[] args) {

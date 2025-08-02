@@ -37,12 +37,15 @@ class Editor {
     public static void main(String[] args) {
         Editor editor = new Editor();
         editor.setText("Version 1");
-        Memento saved = editor.save();
+        Memento versionOneMemento = editor.save();
+
+        System.out.println("MEMENTO CONTAINS: " + versionOneMemento.state);
 
         editor.setText("Version 2");
+        Memento versionTwoMemento = editor.save();
         System.out.println("Current: " + editor.getText());
 
-        editor.restore(saved);
+        editor.restore(versionOneMemento);
         System.out.println("Restored: " + editor.getText());
     }
 }

@@ -3,5 +3,6 @@ package org.sda.factory.notification;
 public enum NotificationType {
     SMS,
     EMAIL,
-    PUSH
+    PUSH,
+    REMINDER
 }
